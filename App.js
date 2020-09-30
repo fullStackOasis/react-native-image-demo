@@ -89,7 +89,12 @@ const styles = StyleSheet.create({
 	  // Without height undefined it won't work
 	  height: undefined,
 	  // figure out your image aspect ratio
-	  aspectRatio: 135 / 76,
+	  // this isn't really aspect ratio. It is used to figure out the height.
+	  // If you set it to 40/3, the image gets severely cropped in the y-direction.
+	  // If you set it to 1/30, the image is severely enlarged in the y-direction.
+	  // If you set it to 1/1, the image is square.
+	  // If you set it to 2/1, the image is twice as wide as it is high.
+	  aspectRatio: 2 / 1,
 	},
 
 });
