@@ -83,6 +83,14 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  // Solution from https://stackoverflow.com/questions/29642685/maintain-aspect-ratio-of-image-with-full-width-in-react-native
+	responsiveImage: {
+	  width: '100%',
+	  // Without height undefined it won't work
+	  height: undefined,
+	  // figure out your image aspect ratio
+	  aspectRatio: 135 / 76,
+	},
 
 });
 
